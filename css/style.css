@@ -1,0 +1,17 @@
+body {
+  background-color: rgb(222, 226, 230);
+}
+
+.ex-mail {
+  background-color: rgb(144, 146, 148);
+  box-shadow: 10px 10px 5px rgb(120, 125, 126);
+}
+
+.ex-dadi {
+  background-color: rgb(89, 92, 95);
+  box-shadow: 10px 10px 5px rgb(120, 125, 126);
+}
+
+i {
+  color: rgb(233, 236, 239);
+}

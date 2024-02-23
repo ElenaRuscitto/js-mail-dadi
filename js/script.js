@@ -17,11 +17,11 @@ for (let i = 0; i < totMail.length; i++) {
 
 if (verifica) {
   alert ('la tua mail è nel sistema');
-  document.querySelector('div').innerHTML='Congratulazioni, hai un dominio che può accedere al sistema! ';
+  document.querySelector('.email').innerHTML='Congratulazioni, hai un dominio che può accedere al sistema! ';
 
  } else {
   alert ('Mi dispiace! La tua mail NON è nel sistema');
-  document.querySelector('div').innerHTML='Gentile utente, purtroppo hai un dominio che NON può accedere al sistema! ';
+  document.querySelector('.email').innerHTML='Gentile utente, purtroppo hai un dominio che NON può accedere al sistema! ';
  } 
 
 
@@ -29,16 +29,26 @@ if (verifica) {
 let numRandomUt = (Math.ceil(Math.random()*6));
 let numRandomPc = (Math.ceil(Math.random()*6));
 console.log (numRandomUt, numRandomPc);
+ 
 
 if (numRandomPc < numRandomUt) {
-  document.querySelector('p').innerHTML='HAI VINTO! hai battuto il computer! ';
+
+  document.getElementById('edadi').innerHTML=`
+  HAI VINTO! hai battuto il computer! <br> 
+  tu hai giocato il numero ${numRandomUt} ed il tuo avversario il numero ${numRandomPc}
+  `;
 
 } else if (numRandomUt < numRandomPc) {
-  document.querySelector('p').innerHTML='HAI PERSO! il computer ti ha battuto! ';
+  document.getElementById('edadi').innerHTML=`
+  HAI PERSO! il computer ti ha battuto! <br> 
+  tu hai giocato il numero ${numRandomPc} ed il tuo avversario il numero ${numRandomUt}
+  `;
 
 } else { 
-  
-  document.querySelector('p').innerHTML='AVETE PAREGGIATO!';
+  document.getElementById('edadi').innerHTML=`
+  AVETE PAREGGIATO! <br>
+  tu hai giocato il numero ${numRandomPc} ed il tuo avversario il numero ${numRandomUt}
+  `;
 
 }
 
