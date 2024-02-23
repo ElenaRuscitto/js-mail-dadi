@@ -26,31 +26,37 @@ if (verifica) {
 
 
 // DADI
-let numRandomUt = (Math.ceil(Math.random()*6));
-let numRandomPc = (Math.ceil(Math.random()*6));
-console.log (numRandomUt, numRandomPc);
- 
 
-if (numRandomPc < numRandomUt) {
+const btn = document.querySelector('.btn');
 
-  document.getElementById('edadi').innerHTML=`
-  HAI VINTO! hai battuto il computer! <br> 
-  tu hai giocato il numero ${numRandomUt} ed il tuo avversario il numero ${numRandomPc}
-  `;
+btn.addEventListener('click', function() {
 
-} else if (numRandomUt < numRandomPc) {
-  document.getElementById('edadi').innerHTML=`
-  HAI PERSO! il computer ti ha battuto! <br> 
-  tu hai giocato il numero ${numRandomPc} ed il tuo avversario il numero ${numRandomUt}
-  `;
+  let numRandomUt = (Math.ceil(Math.random()*6));
+  let numRandomPc = (Math.ceil(Math.random()*6));
+  
+  console.log (numRandomUt, numRandomPc);
 
-} else { 
-  document.getElementById('edadi').innerHTML=`
-  AVETE PAREGGIATO! <br>
-  tu hai giocato il numero ${numRandomPc} ed il tuo avversario il numero ${numRandomUt}
-  `;
+  if (numRandomPc < numRandomUt) {
 
-}
+    document.getElementById('edadi').innerHTML=`
+    HAI VINTO!  <br> 
+    tu hai giocato il numero ${numRandomUt} ed il tuo avversario il numero ${numRandomPc}
+    `;
+  
+  } else if (numRandomUt < numRandomPc) {
+    document.getElementById('edadi').innerHTML=`
+    HAI PERSO!  <br> 
+    tu hai giocato il numero ${numRandomPc} ed il tuo avversario il numero ${numRandomUt}
+    `;
+  
+  } else { 
+    document.getElementById('edadi').innerHTML=`
+    AVETE PAREGGIATO! <br>
+    tu hai giocato il numero ${numRandomPc} ed il tuo avversario il numero ${numRandomUt}
+    `;
+  
+  }
+})
 
 
 
